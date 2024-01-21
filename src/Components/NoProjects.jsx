@@ -1,10 +1,10 @@
-import noProject from "../assets/no-projects.png";
+import logo from "../assets/no-projects.png";
 import Button from "./Button";
 export default function NoProjectSelected({ onStartAddProject }) {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
-        src={noProject}
+        src={logo}
         alt="No Porjects Yet"
         className="w-16 h-16 object-contain mx-auto"
       />

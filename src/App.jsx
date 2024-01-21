@@ -10,16 +10,16 @@ function App() {
     projects: [],
   });
 
-  function handleStartAddProject() {
+  const handleStartAddProject = () => {
     setProjectState((prevState) => {
       return {
         ...prevState,
         selectedProjectId: null,
       };
     });
-  }
+  };
 
-  function AddProject(projectData) {
+  const AddProject = (projectData) => {
     setProjectState((prevState) => {
       const newProject = {
         ...projectData,
@@ -31,18 +31,18 @@ function App() {
         projects: [...prevState.projects, newProject],
       };
     });
-  }
+  };
 
-  function showProjects(id) {
+  const showProjects = (id) => {
     setProjectState((prevState) => {
       return {
         ...prevState,
         selectedProjectId: id,
       };
     });
-  }
+  };
 
-  function DeleteProject() {
+  const DeleteProject = () => {
     setProjectState((prevState) => {
       return {
         ...prevState,
@@ -52,8 +52,9 @@ function App() {
         ),
       };
     });
-  }
+  };
   // console.log(projectState);
+
   const selectedProj = projectState.projects.find(
     (project) => project.id === projectState.selectedProjectId
   );
